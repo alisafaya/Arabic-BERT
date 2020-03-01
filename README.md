@@ -4,7 +4,7 @@ Pretrained BERT base language model for Arabic
 
 ## Pretraining Corpus
 
-`arabic-bert-base` model was pretrained on ~8.2 Billion words:
+`bert-base-arabic` model was pretrained on ~8.2 Billion words:
 
 - Arabic version of [OSCAR](https://traces1.inria.fr/oscar/) - filtered from [Common Crawl](http://commoncrawl.org/)
 - Recent dump of Arabic [Wikipedia](https://dumps.wikimedia.org/backup-index.html)
