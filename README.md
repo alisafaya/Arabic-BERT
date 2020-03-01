@@ -31,8 +31,8 @@ You can use this model by installing `torch` or `tensorflow` and Huggingface lib
 ```python
 from transformers import AutoTokenizer, AutoModel
 
-tokenizer = AutoTokenizer.from_pretrained("safaya/bert-base-arabic")
-model = AutoModel.from_pretrained("safaya/bert-base-arabic")
+tokenizer = AutoTokenizer.from_pretrained("asafaya/bert-base-arabic")
+model = AutoModel.from_pretrained("asafaya/bert-base-arabic")
 ```
 
 ## Acknowledgement
