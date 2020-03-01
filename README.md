@@ -35,7 +35,8 @@ model = AutoModel.from_pretrained("asafaya/bert-base-arabic")
 
 ## Results
 
-For further details on the models performance or any other queries, please refer to [Arabic-BERT](https://github.com/alisafaya/Arabic-BERT)
+- You can find the outputs of the training process on tensorboard: [Arabic-BERT](https://tensorboard.dev/experiment/qv6llNexQKeXsBoT9ooRoQ/)
+- Results on downstream NLP tasks will be added soon.
 
 ## Acknowledgement
 
