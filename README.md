@@ -21,6 +21,7 @@ __Notes on training data:__
 
 - This model was trained using Google BERT's github [repository](https://github.com/google-research/bert) on a single TPU v3-8 provided for free from [TFRC](https://www.tensorflow.org/tfrc).
 - Our pretraining procedure follows training settings of bert with some changes: trained for 3M training steps with batchsize of 128, instead of 1M with batchsize of 256.
+- You can find the outputs of the training process on tensorboard: [Arabic-BERT](https://tensorboard.dev/experiment/qv6llNexQKeXsBoT9ooRoQ/)
 
 ## Load Pretrained Model
 
@@ -35,8 +36,20 @@ model = AutoModel.from_pretrained("asafaya/bert-base-arabic")
 
 ## Results
 
-- You can find the outputs of the training process on tensorboard: [Arabic-BERT](https://tensorboard.dev/experiment/qv6llNexQKeXsBoT9ooRoQ/)
-- Results on downstream NLP tasks will be added soon.
+
+### Sentiment Analysis Results (F1-Score)
+
+| Dataset   | Details | ML-BERT   | [hULMona](https://github.com/aub-mind/hULMonA)  | Arabic-BERT  |
+|:---------:|:-------:|:---------:|:--------:|:------------:|
+| [HARD](https://github.com/elnagara/HARD-Arabic-Dataset) | 2 Classes, Mixed dialects | 0.957     | 0.957    | -            |
+| [ArSenLev](https://arxiv.org/abs/1906.01830) | 5 Classes, Levantine dialect  | 0.510     | 0.511    | __0.552__    |
+| [ASTD](https://www.sites.google.com/a/mohamedaly.info/www/datasets/astd) |  4 Classes, MSA and Egyptian dialects | 0.670     | 0.677    | __0.714__    |
+
+- More results on other downstream NLP tasks will be added soon. if you use this model, I would appreciate your feedback.
+
+### Named Entity Recognition
+
+To be added.
 
 ## Acknowledgement
 
