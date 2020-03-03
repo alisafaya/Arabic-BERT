@@ -39,17 +39,19 @@ model = AutoModel.from_pretrained("asafaya/bert-base-arabic")
 
 ### Sentiment Analysis Results (F1-Score)
 
-| Dataset   | Details | ML-BERT   | [hULMona](https://github.com/aub-mind/hULMonA)  | Arabic-BERT  |
+| Dataset   | Details | [ML-BERT](https://github.com/google-research/bert/blob/master/multilingual.md)   | [hULMona](https://github.com/aub-mind/hULMonA)  | Arabic-BERT  |
 |:---------:|:-------:|:---------:|:--------:|:------------:|
 | [HARD](https://github.com/elnagara/HARD-Arabic-Dataset) | 2 Classes, Mixed dialects | 0.957     | 0.957    | -            |
 | [ArSenLev](https://arxiv.org/abs/1906.01830) | 5 Classes, Levantine dialect  | 0.510     | 0.511    | __0.552__    |
 | [ASTD](https://www.sites.google.com/a/mohamedaly.info/www/datasets/astd) |  4 Classes, MSA and Egyptian dialects | 0.670     | 0.677    | __0.714__    |
 
-- More results on other downstream NLP tasks will be added soon. if you use this model, I would appreciate your feedback.
+
 
 ### Named Entity Recognition
 
 To be added.
+
+__Note:__ More results on other downstream NLP tasks will be added soon. if you use this model, I would appreciate your feedback.
 
 ## Acknowledgement
 
