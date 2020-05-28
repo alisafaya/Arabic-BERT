@@ -25,7 +25,7 @@ and other Arabic resources which sum up to ~95GB of text.
 __Notes on training data:__
 
 - Our final version of corpus contains some non-Arabic words inlines, which we did not remove from sentences since that would affect some tasks like NER.
-- Although non-Arabic characters were lowered as a preprocessing step, since Arabic characters does not have upper or lower case, there is no cased and uncased version of the model.
+- Although non-Arabic characters were lowered as a preprocessing step, since Arabic characters do not have upper or lower case, there is no cased and uncased version of the model.
 - The corpus and vocabulary set are not restricted to Modern Standard Arabic, they contain some dialectical Arabic too.
 
 ## Pretraining details
