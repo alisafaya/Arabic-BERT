@@ -74,4 +74,4 @@ model = AutoModel.from_pretrained("asafaya/bert-base-arabic")
 
 ## Acknowledgement
 
-Thanks to Google for providing free TPU for the training process and for Huggingface for hosting this model on their servers 😊
+Thanks to Google for providing free TPU for the training process and for Huggingface for hosting these models on their servers 😊
