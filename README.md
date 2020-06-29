@@ -1,8 +1,8 @@
-# Arabic BERT Model
+# Arabic BERT
 
-Pretrained BERT base language model for Arabic
+Pretrained BERT language models for Arabic
 
-_If you use this model in your work, please cite this paper (to appear in 2020):_
+_If you use any of these models in your work, please cite this paper (to appear in SemEval2020 proceedings):_
 
 ```
 @inproceedings{
@@ -13,9 +13,9 @@ _If you use this model in your work, please cite this paper (to appear in 2020):
 }
 ```
 
-## Pretraining Corpus
+## Pretraining data
 
-`bert-base-arabic` model was pretrained on ~8.2 Billion words:
+The models were pretrained on ~8.2 Billion words:
 
 - Arabic version of [OSCAR](https://traces1.inria.fr/oscar/) - filtered from [Common Crawl](http://commoncrawl.org/)
 - Recent dump of Arabic [Wikipedia](https://dumps.wikimedia.org/backup-index.html)
@@ -30,39 +30,47 @@ __Notes on training data:__
 
 ## Pretraining details
 
-- This model was trained using Google BERT's github [repository](https://github.com/google-research/bert) on a single TPU v3-8 provided for free from [TFRC](https://www.tensorflow.org/tfrc).
+- These models were trained using Google BERT's github [repository](https://github.com/google-research/bert) on a single TPU v3-8 provided for free from [TFRC](https://www.tensorflow.org/tfrc).
 - Our pretraining procedure follows training settings of bert with some changes: trained for 3M training steps with batchsize of 128, instead of 1M with batchsize of 256.
-- You can find the outputs of the training process on tensorboard: [Arabic-BERT](https://tensorboard.dev/experiment/qv6llNexQKeXsBoT9ooRoQ/)
 
-## Load Pretrained Model
+## Models
 
-You can use this model by installing `torch` or `tensorflow` and Huggingface library `transformers`. And you can use it directly by initializing it like this:  
-
-```python
-from transformers import AutoTokenizer, AutoModel
-
-tokenizer = AutoTokenizer.from_pretrained("asafaya/bert-base-arabic")
-model = AutoModel.from_pretrained("asafaya/bert-base-arabic")
-```
+|  | BERT-Mini | BERT-Medium   | BERT-Base  | BERT-Large  |
+|:---:|:---:|:---:|:---:|:---:|
+| Hidden Layers | 4 | 8 | 12 | 24 |
+| Attention heads | 4 | 8 | 12 | 16 |
+| Hidden size | 256 | 512 | 768 | 1024 |
+| Parameters | 11M | 42M | 110M | 340M |
 
 ## Results
 
 
 ### Sentiment Analysis Results (F1-Score)
 
-| Dataset   | Details | [ML-BERT](https://github.com/google-research/bert/blob/master/multilingual.md)   | [hULMona](https://github.com/aub-mind/hULMonA)  | Arabic-BERT  |
+| Dataset   | Details | [ML-BERT](https://github.com/google-research/bert/blob/master/multilingual.md)   | [hULMona](https://github.com/aub-mind/hULMonA)  | Arabic-BERT Base  |
 |:---------:|:-------:|:---------:|:--------:|:------------:|
 | [HARD](https://github.com/elnagara/HARD-Arabic-Dataset) | 2 Classes, Mixed dialects | 0.957     | 0.957    | -            |
 | [ArSenLev](https://arxiv.org/abs/1906.01830) | 5 Classes, Levantine dialect  | 0.510     | 0.511    | __0.552__    |
 | [ASTD](https://www.sites.google.com/a/mohamedaly.info/www/datasets/astd) |  4 Classes, MSA and Egyptian dialects | 0.670     | 0.677    | __0.714__    |
 
 
+__Note:__ More results on other downstream NLP tasks will be added soon. if you use these models, I would appreciate your feedback.
 
-### Named Entity Recognition
+## How to use
 
-To be added.
+You can use these models by installing `torch` or `tensorflow` and Huggingface library `transformers`. And you can use it directly by initializing it like this:  
 
-__Note:__ More results on other downstream NLP tasks will be added soon. if you use this model, I would appreciate your feedback.
+```python
+from transformers import AutoTokenizer, AutoModel
+
+# Mini:   asafaya/bert-mini-arabic
+# Medium: asafaya/bert-medium-arabic
+# Base:   asafaya/bert-base-arabic
+# Large:  asafaya/bert-large-arabic
+
+tokenizer = AutoTokenizer.from_pretrained("asafaya/bert-base-arabic")
+model = AutoModel.from_pretrained("asafaya/bert-base-arabic")
+```
 
 ## Acknowledgement
 
