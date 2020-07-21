@@ -17,7 +17,7 @@ _If you use any of these models in your work, please cite this paper (to appear 
 
 The models were pretrained on ~8.2 Billion words:
 
-- Arabic version of [OSCAR](https://oscar-corpus.com/) - filtered from [Common Crawl](http://commoncrawl.org/)
+- Arabic version of [OSCAR](https://oscar-corpus.com/) (unshuffled version of the corpus) - filtered from [Common Crawl](http://commoncrawl.org/)
 - Recent dump of Arabic [Wikipedia](https://dumps.wikimedia.org/backup-index.html)
 
 and other Arabic resources which sum up to ~95GB of text.
