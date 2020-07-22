@@ -1,4 +1,4 @@
-# Arabic BERT
+# ArabicBERT
 
 Pretrained BERT language models for Arabic
 
