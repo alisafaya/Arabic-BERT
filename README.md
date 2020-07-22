@@ -31,7 +31,7 @@ __Notes on training data:__
 ## Pretraining details
 
 - These models were trained using Google BERT's github [repository](https://github.com/google-research/bert) on a single TPU v3-8 provided for free from [TFRC](https://www.tensorflow.org/tfrc).
-- Our pretraining procedure follows training settings of bert with some changes: trained for 3M training steps with batchsize of 128, instead of 1M with batchsize of 256.
+- Our pretraining procedure follows training settings of bert with some changes: trained for 4M training steps with batchsize of 128, instead of 1M with batchsize of 256.
 
 ## Models
 
